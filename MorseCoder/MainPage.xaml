@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MorseCoder.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+    Text="Morse Coder"
+    Style="{StaticResource Headline}"
+    SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+    x:Name="TheText"
+    Text="AAA"
+    Style="{StaticResource SubHeadline}"
+    />
+            <Label
+     x:Name="TheCode"
+     Text="..."
+     Style="{StaticResource SubHeadline}"
+        />
+            <HorizontalStackLayout>
+                <Button
+                         x:Name="DotBTn"
+                         Text="." 
+                        SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnDotClicked"
+                         HorizontalOptions="Fill" />
+                <Button
+                    x:Name="DashBtn"
+                    Text="-" 
+                    SemanticProperties.Hint="Counts the number of times you click"
+                        Clicked="OnDashClicked"
+                    />
+                <Button
+                            x:Name="SpaceBTn"
+                        Text="Space" 
+                        SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnSpaceClicked"
+                    />
+            </HorizontalStackLayout>
+
+            <Label
+x:Name="ResponseText"
+Text="AAA"
+Style="{StaticResource SubHeadline}"
+/>
+            <Label
+ x:Name="ResponseCode"
+ Text="..."
+ Style="{StaticResource SubHeadline}"
+    />
+            <HorizontalStackLayout>
+                <Button
+                     x:Name="ReplyDotBTn"
+                     Text="." 
+                    SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="ResponseDotClicked"
+                     HorizontalOptions="Fill" />
+                <Button
+                x:Name="ReplyDashBtn"
+                Text="-" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="RresponseDashClicked"
+                />
+                <Button
+                        x:Name="ReplySpaceBtn"
+                    Text="Space" 
+                    SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="ResponseSpaceClicked"
+                />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
